@@ -1,7 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   background-color: var(--background-color, #fff1f7);
-  background-image: var(--background-image, url("../images/cover-image.png"));
+  background-image: var(
+    --background-image,
+    url("../images/cover-image-light.png")
+  );
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -58,7 +61,7 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text-color, #353430);
 }
 
 .link:focus {
@@ -70,7 +73,7 @@
 }
 
 .rec-decor {
-  visibility: var(--rec-decor-visibility, visible);
+  visibility: var(--rec-decor-visibility, hidden);
   position: absolute;
   z-index: -1;
   display: inline-flex;
@@ -91,7 +94,7 @@
   display: inline-block;
   background: var(--accent-color, #ff8dcb);
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff8dcb);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff8dcb);
   inline-size: 9px;
   block-size: 9px;
 }
@@ -124,7 +127,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--hover-border-color, rgba(50, 49, 45, 0.4));
+  outline: 1px solid var(--border-color, rgba(50, 49, 45, 0.4));
 }
 
 .header__theme-menu-button:focus {
@@ -279,7 +282,7 @@
   .header__paragraph {
     justify-self: end;
     max-inline-size: 47vw;
-    margin-right: 12px; 
+    margin-right: 12px;
     margin-block: 162px;
   }
 
@@ -319,6 +322,9 @@
   .header__paragraph {
     margin-block-start: 116px;
     max-inline-size: 48vw;
+  }
 
+  .footer__title {
+    text-shadow: 4px 4px 0 var(--shadow-color, #ff0070);
   }
 }
